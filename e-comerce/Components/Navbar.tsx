@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { Handbag, Heart, UserRound } from "lucide-react";
+import { Handbag, Heart, Menu, UserRound } from "lucide-react";
 export default function Navbar(): React.ReactElement {
   interface InterfaceNav {
     id: number;
@@ -17,7 +17,8 @@ export default function Navbar(): React.ReactElement {
   return (
     <div className="flex  justify-between p-4">
       <div>
-        <span className="font-black text-amber-300 text-2xl  text-italic hover:cursor-pointer hover:text-white ">
+        <span className="font-black lg:hidden text-amber-300 text-2xl  text-italic hover:cursor-pointer hover:text-white ">
+        <Menu size={48} strokeWidth={0.75} />
         </span>
         <ul className="flex gap-3">
           {navLinks.map((link) => {
